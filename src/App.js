@@ -33,15 +33,18 @@ const App = () => {
 
   const getMovieRequest = async (searchValue) => {
     // const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1c34b055`;
+
     // const url = `http://www.omdbapi.com/?s=pirates&apikey=1c34b055`;
-    // const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1c34b055`;
-    // const { data } = await axios.get(url);
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1c34b055`;
+
+    const { data } = await axios.get(url);
     // console.log(data.Search);
-    // if (data.Search) {
-    //   console.log(`Search-${JSON.stringify(data.Search)}`);
-    //   setMovies(data.Search);
-    //   console.log(`movies- ${JSON.stringify(movies)}`);
-    // }
+    if (data.Search) {
+      console.log(`Search-${JSON.stringify(data.Search)}`);
+      setMovies(data.Search);
+      console.log(`movies- ${JSON.stringify(movies)}`);
+    }
+
     // console.log(`movies- ${JSON.stringify(movies)}`);
   };
 
