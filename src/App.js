@@ -20,7 +20,16 @@ const App = () => {
     },
   ]);
   const [searchValue, setSearchValue] = useState("");
-  const [favourites, setFavourites] = useState([]);
+  const [favourites, setFavourites] = useState([
+    {
+      Title: "Pirates of the Caribbean: The Curse of the Black Pearl",
+      Year: "2003",
+      imdbID: "tt0325980",
+      Type: "movie",
+      Poster:
+        "https://m.media-amazon.com/images/M/MV5BNGYyZGM5MGMtYTY2Ni00M2Y1LWIzNjQtYWUzM2VlNGVhMDNhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    },
+  ]);
 
   const getMovieRequest = async (searchValue) => {
     // const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1c34b055`;
