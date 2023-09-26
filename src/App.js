@@ -9,7 +9,16 @@ import AddFavourites from "./components/AddFavourites";
 import RemoveFavourites from "./components/RemoveFavourites";
 
 const App = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([
+    {
+      Title: "Pirates of the Caribbean: The Curse of the Black Pearl",
+      Year: "2003",
+      imdbID: "tt0325980",
+      Type: "movie",
+      Poster:
+        "https://m.media-amazon.com/images/M/MV5BNGYyZGM5MGMtYTY2Ni00M2Y1LWIzNjQtYWUzM2VlNGVhMDNhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    },
+  ]);
   const [searchValue, setSearchValue] = useState("");
   const [favourites, setFavourites] = useState([]);
 
